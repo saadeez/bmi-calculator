@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-image: url(../img/tractive-gps-dog-4-and-tractive-gps-cat-4-tracker.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-color: #fff;
+}
+
+body:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 0;
+	background: rgb(255, 255, 255);
+	/*    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,86,137,0.8) 220%);*/
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(0, 86, 137, 0.8) 220%);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.box-minmax {
+	margin-top: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	color: #005689;
+	font-weight: 500;
+}
+
+.box-minmax span:first-child {
+	margin-left: 10px;
+}
+
+.range-slider {
+	margin-top: 30vh;
+}
+
+.rs-range {
+	margin-top: 29px;
+    width: 598px;
+    -webkit-appearance: none;
+}
+
+.rs-range:focus {
+	outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 0px;
+	cursor: pointer;
+	box-shadow: none;
+	border-radius: 0px;
+	background: transparent !important;
+	border-color: transparent !important;
+	color: transparent !important;
+}
+
+.rs-range::-moz-range-track {
+	width: 100%;
+	height: 0px;
+	cursor: pointer;
+	box-shadow: none;
+	border-radius: 0px;
+	background: transparent !important;
+	border-color: transparent !important;
+	color: transparent !important;
+}
+
+.rs-range::-webkit-slider-thumb {
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	height: 30px;
+	width: 22px;
+	border-radius: 22px;
+	background: white;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -20px;
+	border-radius: 6px 6px 20px 20px;
+}
+
+.rs-range::-moz-range-thumb {
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	height: 30px;
+	width: 22px;
+	border-radius: 22px;
+	background: white;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -20px;
+	border-radius: 6px 6px 20px 20px;
+}
+
+.rs-range::-moz-focus-outer {
+	border: 0;
+}
+
+.rs-label {
+	position: relative;
+	transform-origin: center center;
+	display: block;
+	width: 98px;
+	height: 98px;
+	background: #fff;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 22px;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	margin-top: 20px;
+	margin-left: -38px;
+	color: #005689;
+	line-height: 28px;
+	font-size: 36px;
+	box-shadow: 0 2px 6px rgb(0 0 0 / 28%);
+}
+
+.rs-label:after {
+	content: "BMI";
+	display: block;
+	font-size: 20px;
+	letter-spacing: 0.07em;
+	margin-top: -2px;
+}
+
+.rs-label:before {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #fff;
+	content: "";
+	position: absolute;
+	bottom: -50px;
+	border-radius: 4px 4px 0 4px;
+	cursor: pointer;
+	left: 29%;
+}
+
+.meter {
+	display: flex;
+	flex: 1;
+	position: relative;
+	z-index: -1;
+	margin-top: 2px;
+	box-shadow: 0 2px 6px rgb(0 0 0 / 28%);
+	border-radius: 100px;
+	width: 100%;
+}
+
+.meter span {
+	padding: 10px;
+	margin: 0 1px;
+	flex: 1;
+	text-align: center;
+	font-weight: 500;
+	color: #fff;
+}
+
+.meter span:first-child {
+	background-color: #03acff;
+	border-radius: 30px 0 0 30px;
+}
+
+.meter span {
+	background-color: #007cb9;
+}
+
+.meter span:nth-child(2) {
+	flex: 2;
+	margin: 0 1px;
+}
+
+.meter span:last-child {
+	background-color: #005689;
+	border-radius: 0 30px 30px 0;
+}
+
+@media only screen and (min-width:1200px){
+	.range-slider {
+		width: 45%;
+	}
+}
+@media only screen and (min-width:768px) and (max-width:1199px){
+	.range-slider {
+		width: 60%;
+	}
+}
+@media only screen and (max-width:767px){
+	.range-slider {
+		width: 80%;
+	}
+	.rs-label {
+		font-size: 26px;
+		width: 80px;
+		height: 80px;
+		line-height: 20px;
+		margin-left: -33px;
+	}
+}
